@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<title>Code Style CSS</title>
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__container container">
+			<h1 class="header__title">Code Style CSS</h1>
+
+			<nav class="navigation">
+				<ul class="navigation__list">
+
+					<li class="navigation__item">
+						<a class="navigation__link" href="index.html">
+							<span class="navigation__arrow navigation__arrow_back"></span>
+							<p class="navigation__text">Code Style <span class="navigation_purple">Main</span></p>
+						</a>
+					</li>
+
+					<li class="navigation__item">
+						<a class="navigation__link" href="html.html">
+							<span class="navigation__arrow"></span>
+							<p class="navigation__text">Code Style <span class="navigation_blue">HTML</span></p>
+						</a>
+					</li>
+
+				</ul>
+			</nav>
+
+		</div>
+	</header>
+
+	<main>
+		<article class="stylesheet">
+			<div class="container">
+				<h2 class="title">Code Style CSS</h2>
+
+				<section class="stylesheet__section">
+					<h3 class="subtitle">Хороший код — это код который удобно читать и поддерживать.</h3>
+
+					<ul class="stylesheet-main-list">
+						<li class="stylesheet-main-list__item">
+							<p>Хороший код должен быть простым:</p>
+
+							<ul class="stylesheet-inner-list">
+								<li><p>— используйте легко читаемые селекторы и говорящие классы. По ним сразу можно понять к чему применяются стили.</p></li>
+								<li><p>— классы пишите в нижнем регистре (строчными буквами).</p></li>
+								<li><p>— вместо пробела в классах используйте знак «дефис». Старайтесь не использовать нижнее подчеркивание и camelCase.</p></li>
+								<li><p>— код должен быть в одном стиле: везде используется один порядок свойств, одинаковые отступы и пробелы, один стиль записи цветов и псевдоэлементов</p></li>
+							</ul>
+
+							<div class="stylesheet-example">
+								<figure>
+									<figcaption class="stylesheet-example__title">плохо</figcaption>
+									<img class="img img_badly" src="img/css/badly.jpg" alt="Плохой пример кода без единого стиля">
+								</figure>
+
+								<figure>
+									<figcaption class="stylesheet-example__title">хорошо</figcaption>
+									<img class="img img_fine" src="img/css/fine.jpg" alt="Хороший пример кода в едином стиле">
+								</figure>
+							</div>
+						</li>
+
+						<li class="stylesheet-main-list__item">
+							<p>Оформляем блок со свойствами:</p>
+
+							<ul class="stylesheet-inner-list">
+								<li><p>— после селектора, перед открывающей блок «фигурной скобкой» ставьте «пробел».</p></li>
+								<li><p>— в начале строки перед свойствами ставится «два пробела». Это самый популярный вариант.</p></li>
+								<li><p>— после двоеточия ставьте «пробел».</p></li>
+								<li><p>— обязательно ставить «точку с запятой» в конце свойства.</p></li>
+								<li><p>— ставьте закрывающую «фигурную скобку» на новой строке.</p></li>
+							</ul>
+							
+							<figure>
+								<figcaption class="stylesheet-inner-list__example-title">Между набором правил оставляйте одну пустую строку:</figcaption>
+								<img class="img img_code" src="img/css/code.jpg" alt="Пример кода, где между блоками со свойствами оставлена одна пустая строка">
+							</figure>
+						</li>
+
+						<li class="stylesheet-main-list__item"><p>Все стили пишем через селектор класса. Теги используем только для глобальных стилей, <i class="bold" lang="en">id</i> в стилях не используем.</p></li>
+
+						<li class="stylesheet-main-list__item"><p>Избегайте использование <i class="bold" lang="en">!important</i>.</p></li>
+
+						<li class="stylesheet-main-list__item"><p>Псевдокласс <i class="bold" lang="en">nth-child</i> используем только со значениями even и <i class="bold" lang="en">odd</i>. В остальных случая используем дополнительный класс.</p></li>
+
+						<li class="stylesheet-main-list__item">
+							<p>Сохраняйте уровень вложенности не более двух элементов, если не используем БЭМ.</p>
+
+							<pre class="stylesheet-main-list__code-example">
+								<span>Плохо: <code class="bold" lang="en">.block .faq .title</code></span>
+								<span>Хорошо: <code class="bold" lang="en">.faq .title</code></span>
+							</pre>
+						</li>
+
+						<li class="stylesheet-main-list__item"><p>При использовании БЭМ вложенность не используется.</p></li>
+
+						<li class="stylesheet-main-list__item"><p>Обязательно указывайте альтернативный вид и тип семейства шрифтов.</p></li>
+
+						<li class="stylesheet-main-list__item"><p>Проверяйте вёрстку на переполнение.</p></li>
+
+						<li class="stylesheet-main-list__item"><p>У интерактивных элементов обязательны стили состояний: <i class="bold" lang="en">hover</i>, <i class="bold" lang="en">focus</i>, <i class="bold" lang="en">active</i>, <i class="bold" lang="en">disabled</i>.</p></li>
+
+						<li class="stylesheet-main-list__item"><p>Если используете свойство <i class="bold" lang="en">display: inline-block</i>, обязательно добавляйте свойство <i class="bold" lang="en">vertical-align</i>.</p></li>
+
+						<li class="stylesheet-main-list__item"><p>Свойство <i class="bold" lang="en">position</i> используем в крайнем случае. Исключение: если иначе сделать невозможно или сложно.</p></li>
+
+						<li class="stylesheet-main-list__item"><p>У нулевых значений не нужно писать единицы измерения. Когда значение 0, то не важно это px, % или попугайчики.</p></li>
+
+						<li class="stylesheet-main-list__item"><p>Значения цвета <i class="bold" lang="en">hex</i> пишем в нижнем регистре.</p></li>
+						
+						<li class="stylesheet-main-list__item"><p>Проверяйте css в валидаторе — <a class="link" href="https://jigsaw.w3.org/css-validator/" target="_blank">https://jigsaw.w3.org/css-validator/</a></p></li>
+					</ul>
+				</section>
+
+				<section class="stylesheet__section">
+					<h3 class="subtitle">Дополнительно</h3>
+
+					<p>В названиях файлов и папок используйте только латиницу и буквы в нижнем регистре, без пробелов. Для разделения слов используйте «дефис» или нижние подчёркивание.</p>
+				</section>
+
+			</div>
+		</article>
+	</main>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+html {
+  position: relative;
+  box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+	background-color: #ededed;
+	color: #242527;
+}
+
+.container {
+	max-width: 804px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+img, svg {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4{
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+h1,
+h2,
+h3, 
+h4, 
+p,
+figure,
+blockquote {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+cite, 
+i {
+	font-style: normal;
+}
+
+pre, 
+code {
+	font-family: inherit;
+	white-space: normal;
+}
